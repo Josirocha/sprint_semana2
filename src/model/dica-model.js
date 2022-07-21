@@ -1,15 +1,12 @@
-import bd from "../database/bd.js"
+import { tips } from "../database/bd.js"
 
-let id = 0
+export const adiciona = (texto) => {
+  console.log("adicionou");
 
-class Dica {
-
-  adiciona(){
-    console.log("adicionou");
-  }
-  retornaDicaAleatoria(){
-    console.log("aleatorio");
-  }
+  tips.push(texto)
 }
 
-export default Dica
+export const retornaDicaAleatoria = () => {
+  const dica = tips[Math.floor(Math.random() * tips.length)]
+  return dica;
+}

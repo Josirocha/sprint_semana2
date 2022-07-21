@@ -1,3 +1,1 @@
-const tips = []
-
-export default { tips }
+export const tips = []
